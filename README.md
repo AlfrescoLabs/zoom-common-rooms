@@ -1,6 +1,8 @@
 # Zoom Common Rooms
 
-This project provides a JavaScript module intended to be run as an AWS Lambda fufunction via an API Gateway HTTP API, which upon receiving a webhook notification of Zoom's `meeting.participant_joined` or `meeting.participant-left` events, sends a message to Slack to announce this.
+This project provides a JavaScript module intended to be run as an AWS Lambda function via an API Gateway HTTP API, which upon receiving a webhook notification of Zoom's `meeting.participant_joined` or `meeting.participant-left` events, sends a message to Slack to announce who joined or left, along with a link to the Zoom meeting.
+
+It is designed to be used to support virtual coffee break rooms in Zoom, where someone joining may act as a trigger for others to join them inside the room.
 
 ## Setup
 
