@@ -6,7 +6,7 @@ It is designed to be used to support virtual coffee break rooms in Zoom, where s
 
 ## Setup
 
-1. Add the Lambda function in AWS with a HTTP API Gateway trigger
+1. Add the contents of [index.js](index.js) as a Lambda function in AWS with a HTTP API Gateway trigger
 2. Create a custom App in Zoom, enable Event Subscriptions and add a rule for the _Meeting Participant or Host joined meeting_ and _Meeting Participant or Host left meeting_ events to send a notification to the URL of the API created in _Step 1_
 3. After creating the Zoom Event Subscription you should see a _Verification Token_ now displayed. Add this value to the Lambda as an environment variable with the key `ZOOM_APP_SECRET`, this will ensure that only Zoom can call the Lambda function
 4. Create another environment variable named `ZOOM_MEETING_IDS`, containing a comma-separated list of the meeting IDs that you want notifications to be posted for
